@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using Willu_Backend.Data;
 using Willu_Backend.DTOs;
 using Willu_Backend.Entities;

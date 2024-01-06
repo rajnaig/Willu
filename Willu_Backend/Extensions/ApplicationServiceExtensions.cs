@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Willu_Backend.Data;
 using Willu_Backend.Interfaces;
 using Willu_Backend.Services;
@@ -13,10 +14,19 @@ namespace Willu_Backend.Extensions
             {
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
+            
+            services.AddSwaggerDocument();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Willu Backend API",
+                    Version = "v1",
+                    Description = "API for Willu application"
+                });
+            });
 
-            services.AddSwaggerGen();
             services.AddScoped<ITokenService, TokenService>();
-
             return services;
         }
     }

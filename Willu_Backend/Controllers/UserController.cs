@@ -7,11 +7,12 @@ using Willu_Backend.Entities;
 namespace Willu_Backend.Controllers
 {
     [Authorize]
-    public class UsersController : BaseApiController
+    public class UserController : BaseApiController
     {
-        private readonly DataContext _context;
-        public UsersController(DataContext context)
+        private readonly DataContext _context   ;
+        public UserController(DataContext context)
         {
+
             _context = context;
         }
 

@@ -1,0 +1,91 @@
+<div class="main-container d-flex">
+    <div class="sidebar" id="side_nav" [class.open]="isSidebarOpen">
+        <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+            <h1 class="fs-4 d-flex align-items-center">
+                <img src="./assets/thesislogo.png" alt="Logo" style="width: 50px; height: 50px; object-fit: cover;">
+                <span class="bg-custom1 px-2 me-2">Willu </span>
+                <span class="bg-custom text-dark rounded shadow px-2 me-2">AI</span>
+
+                
+            </h1>
+            
+            <button class="btn d-md-none d-block close-btn px-1 py-0 text-white" (click)="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <ul class="list-unstyled px-2">
+            <li [class.active]="activeItem === 'Dashboard'" (click)="setActiveItem('Dashboard')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fa-solid fa-gauge"></i> Dashboard
+                </a>
+            </li>
+            <li [class.active]="activeItem === 'Projects'" (click)="setActiveItem('Projects')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fa-solid fa-diagram-project"></i> Projects
+                </a>
+            </li>
+            <li [class.active]="activeItem === 'Messages'" (click)="setActiveItem('Messages')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+                    <span><i class="fa-solid fa-message"></i> Messages</span>
+                    <span class="bg-dark rounded-pill text-white py-0 px-2">0</span>
+                </a>
+            </li>
+            <li [class.active]="activeItem === 'Services'" (click)="setActiveItem('Services')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fa-brands fa-servicestack"></i> Services
+                </a>
+            </li>
+            <li [class.active]="activeItem === 'Customers'" (click)="setActiveItem('Customers')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fa-brands fa-intercom"></i> Customers
+                </a>
+            </li>
+        </ul>
+        <hr class="h-color mx-2">
+
+        <ul class="list-unstyled px-2">
+            <li [class.active]="activeItem === 'Settings'" (click)="setActiveItem('Settings')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </a>
+            </li>
+            <li [class.active]="activeItem === 'Notifications'" (click)="setActiveItem('Notifications')">
+                <a href="#" class="text-decoration-none px-3 py-2 d-block">
+                    <i class="fa-solid fa-envelope"></i> Notifications
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between d-md-none d-block">
+                    <button class="btn px-1 py-0 open-btn me-2" (click)="toggleSidebar()">
+                        <i class="fa-solid fa-gauge"></i>
+                    </button>
+                    <a class="navbar-brand fs-4" href="#">
+                        <span class="bg-dark rounded px-2 py-0 text-white">Willu</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fal fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="dashboard-content px-3 pt-4">
+            <h2 class="fs-5">Hi!</h2>
+            <p>Unveiling the Magic of Seamless Learning</p>
+        </div>
+    </div>
+</div>

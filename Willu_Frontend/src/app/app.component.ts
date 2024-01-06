@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserService } from './services/generated-client';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,10 @@ export class AppComponent implements OnInit {
 
   title = 'Willu AI';
   users: any;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private userService: UserService) {}
 
   ngOnInit(): void {
-    this.http.get<any>('http://localhost:5092/api/users')
-      
+    this.userService.userAll()
       .subscribe({
         next: response => this.users = response,
         error: error => console.error(error),

@@ -1,12 +1,5 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Willu_Backend.Data;
 using Willu_Backend.Extensions;
-using Willu_Backend.Interfaces;
-using Willu_Backend.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +16,8 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    //app.UseOpenApi();
+    app.UseSwaggerUi();
 }
 
 app.UseHttpsRedirection();
