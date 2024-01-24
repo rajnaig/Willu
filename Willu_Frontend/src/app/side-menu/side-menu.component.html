@@ -5,10 +5,7 @@
                 <img src="./assets/thesislogo.png" alt="Logo" style="width: 50px; height: 50px; object-fit: cover;">
                 <span class="bg-custom1 px-2 me-2">Willu </span>
                 <span class="bg-custom text-dark rounded shadow px-2 me-2">AI</span>
-
-                
             </h1>
-            
             <button class="btn d-md-none d-block close-btn px-1 py-0 text-white" (click)="toggleSidebar()">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -56,36 +53,20 @@
                 </a>
             </li>
         </ul>
-    </div>
-    <div class="content">
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="d-flex justify-content-between d-md-none d-block">
-                    <button class="btn px-1 py-0 open-btn me-2" (click)="toggleSidebar()">
-                        <i class="fa-solid fa-gauge"></i>
-                    </button>
-                    <a class="navbar-brand fs-4" href="#">
-                        <span class="bg-dark rounded px-2 py-0 text-white">Willu</span>
-                    </a>
-                </div>
-                <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fal fa-bars"></i>
+        
+        <div class="profile-dropdown mb-2">
+            <div class="btn-group" dropdown [dropup]="isDropup">
+                <button id="button-dropup" dropdownToggle type="button" class="btn btn-profile dropdown-toggle"
+                    aria-controls="dropdown-dropup">
+                    <img src="./assets/profil-pic.png" alt="Profile Image" class="profile-image">
+                    <b>User</b>
+                    <span class="caret"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Profile</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul id="dropdown-dropup" *dropdownMenu class="dropdown-menu" role="menu"
+                    aria-labelledby="button-dropup">
+                    <li role="menuitem"><a class="dropdown-item" href="#"><b>Log out</b></a></li>
+                </ul>
             </div>
-        </nav>
-
-        <div class="dashboard-content px-3 pt-4">
-            <h2 class="fs-5">Hi!</h2>
-            <p>Unveiling the Magic of Seamless Learning</p>
         </div>
     </div>
 </div>

@@ -16,10 +16,11 @@ body {
   min-width: 250px;
   max-width: 250px;
   transition: all 0.3s;
+  height: 100vh;
 }
 .content {
   min-height: 100vh;
-  width: 100%;
+
 }
 hr.h-color {
   background: #343541;
@@ -41,11 +42,42 @@ hr.h-color {
 @media (max-width: 767px) {
   #side_nav {
     margin-left: -250px;
-    position: absolute;
+    position: relative;
     min-height: 100vh;
     z-index: 1;
   }
   #side_nav.active {
     margin-left: 0;
   }
+}
+
+.profile-dropdown {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.btn-profile {
+  color: #fff;
+}
+
+.dropdown-menu {
+  width: 100%;
+  background-color: #f7ae16;
+  
+}
+
+.dropdown-menu :hover {
+  width: 100%;
+  background-color: #f7ae16;
+}
+
+.btn-profile .profile-image {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: 10px;
 }

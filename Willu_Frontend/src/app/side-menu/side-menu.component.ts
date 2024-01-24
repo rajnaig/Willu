@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class SideMenuComponent {
   isSidebarOpen = false;
   activeItem: string = '';
+  isDropup = true;
 
   toggleSidebar() {
     console.log('toggleSidebar() called');
-    
     this.isSidebarOpen = !this.isSidebarOpen;
   }
 
